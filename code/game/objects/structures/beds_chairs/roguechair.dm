@@ -393,9 +393,8 @@
 	metalizer_result = null
 
 /obj/structure/bed/rogue/bedroll/attack_hand(mob/user, params)
-	..()
-	var/mob/living/L = user
-	if(L.m_intent == MOVE_INTENT_SNEAK)
+	. = ..()
+	if(.)
 		return
 	user.visible_message(span_notice("[user] begins rolling up \the [src]."))
 	if(do_after(user, 2 SECONDS, TRUE, src))

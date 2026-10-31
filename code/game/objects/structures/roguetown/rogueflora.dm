@@ -389,6 +389,7 @@
 	attacked_sound = "plantcross"
 	destroy_sound = "plantcross"
 	max_integrity = 2
+	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND
 	blade_dulling = DULLING_CUT
 	debris = list(/obj/item/natural/fibers = 1)
 	plane = FLOOR_PLANE
@@ -575,8 +576,6 @@
 		return
 	if(isliving(user))
 		var/mob/living/L = user
-		if(L.m_intent == MOVE_INTENT_SNEAK)
-			return
 		user.changeNext_move(CLICK_CD_INTENTCAP)
 		playsound(src.loc, "plantcross", 50, FALSE, -1)
 		if(do_after(L, SEARCHTIME, target = src))
