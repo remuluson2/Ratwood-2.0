@@ -49,6 +49,7 @@ GLOBAL_LIST_INIT(charring_bclasses, list(
 
 GLOBAL_LIST_INIT(whipping_bclasses, list(
 	BCLASS_LASHING,
+	BCLASS_PUNISH,
 ))
 
 GLOBAL_LIST_INIT(sunder_bclasses, list(
